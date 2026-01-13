@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
   <head>
-    <meta name="build-version" content="1768311559454">
+    <meta name="build-version" content="1768315463406">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>גילעד דורון | ליווי כושר ותזונה אונליין</title>
@@ -137,6 +137,21 @@
       .carousel-container > * {
         scroll-snap-align: center;
         scroll-snap-stop: always;
+      }
+
+      /* Card content scaling for responsive fit */
+      .carousel-card-content-wrapper {
+        --scale-factor: 0.90; /* Mobile default */
+        transform: scale(var(--scale-factor));
+        transform-origin: top center;
+        width: calc(100% / var(--scale-factor));
+        height: calc(100% / var(--scale-factor));
+      }
+
+      @media (min-width: 768px) {
+        .carousel-card-content-wrapper {
+          --scale-factor: 0.93; /* Desktop */
+        }
       }
 
       /* Stage / Scene Styles */
@@ -503,7 +518,7 @@
   }
 }
 </script>
-  <script type="module" crossorigin src="/Gilad-landing-page/assets/index-Bpeow_vS.js"></script>
+  <script type="module" crossorigin src="/Gilad-landing-page/assets/index-CGMqlh7a.js"></script>
 </head>
   <body>
     <div id="root"></div>
