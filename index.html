@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
   <head>
-    <meta name="build-version" content="1768315463406">
+    <meta name="build-version" content="1768320696409">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>גילעד דורון | ליווי כושר ותזונה אונליין</title>
@@ -36,7 +36,7 @@
         const pathname = window.location.pathname;
         const base = pathname.includes('/Gilad-landing-page/') ? '/Gilad-landing-page' : '';
         // Set unified background image for parallax effect
-        document.documentElement.style.setProperty('--unified-bg', `url('${base}/assets/backgrounds/WhatsApp Image 2026-01-13 at 01.29.03.jpeg')`);
+        document.documentElement.style.setProperty('--unified-bg', `url('${base}/assets/backgrounds/ChatGPT Image Jan 13, 2026, 06_06_51 PM.png')`);
       })();
       
     </script>
@@ -141,16 +141,23 @@
 
       /* Card content scaling for responsive fit */
       .carousel-card-content-wrapper {
-        --scale-factor: 0.90; /* Mobile default */
+        --scale-factor: 0.85; /* Mobile default - more aggressive scaling */
         transform: scale(var(--scale-factor));
         transform-origin: top center;
         width: calc(100% / var(--scale-factor));
         height: calc(100% / var(--scale-factor));
+        margin-bottom: -2px; /* Compensate for scale to show bottom border */
       }
 
       @media (min-width: 768px) {
         .carousel-card-content-wrapper {
-          --scale-factor: 0.93; /* Desktop */
+          --scale-factor: 0.88; /* Desktop - more aggressive scaling */
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .carousel-card-content-wrapper {
+          --scale-factor: 0.90; /* Large desktop - slightly less scaling */
         }
       }
 
@@ -416,7 +423,7 @@
       /* Background Image Layers - Fixed sticky background */
       #main-content {
         position: relative;
-        background-image: var(--unified-bg, url('/Gilad-landing-page/assets/backgrounds/WhatsApp%20Image%202026-01-13%20at%2001.29.03.jpeg'));
+        background-image: var(--unified-bg, url('/Gilad-landing-page/assets/backgrounds/ChatGPT Image Jan 13, 2026, 06_06_51 PM.png'));
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
@@ -518,7 +525,7 @@
   }
 }
 </script>
-  <script type="module" crossorigin src="/Gilad-landing-page/assets/index-CGMqlh7a.js"></script>
+  <script type="module" crossorigin src="/Gilad-landing-page/assets/index-Yalfc8RK.js"></script>
 </head>
   <body>
     <div id="root"></div>
